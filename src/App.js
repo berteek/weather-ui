@@ -1,9 +1,9 @@
-import Header from './components/Header'
+import Header from "./components/Header";
 
-const App = () => {
+function App() {
   return (
     <div className="container">
-      <Header title='Weather UI.'/>
+      <Header title="Weather UI." />
     </div>
   );
 }

@@ -12,7 +12,7 @@ function Details(props) {
   } = props;
 
   return (
-    <>
+    <div className="weather-details">
       <h1>{feelsTemp}</h1>
       <h1>{humidity}</h1>
       <h1>{visibility}</h1>
@@ -20,7 +20,7 @@ function Details(props) {
       <h1>{windSpeed}</h1>
       <h1>{riseTime}</h1>
       <h1>{dawnTime}</h1>
-    </>
+    </div>
   );
 }
 

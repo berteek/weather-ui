@@ -13,3 +13,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.days {
+  display: flex;
+  flex-direction: row;
+}
+
+.day {
+  margin: 5px;
+}
+
+.active-day {
+  background-color: aliceblue;
+}
+
+.weather-details {
+  display: none;
+}
+
+.active-weather-details {
+  display: block;
+}

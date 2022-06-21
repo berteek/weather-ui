@@ -14,7 +14,7 @@ function CurrentDay(props) {
 
 CurrentDay.defaultProps = {
   city: "NO_CITY",
-  temp: "-999",
+  temp: -999,
   condition: "NO_CONDITION",
 };
 

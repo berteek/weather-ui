@@ -1,9 +1,13 @@
-import Header from "./components/Header";
+import Days from "./components/Days";
+import CurrentDay from "./components/CurrentDay";
+import Details from "./components/Details";
 
 function App() {
   return (
     <div className="container">
-      <Header title="Weather UI." />
+      <CurrentDay />
+      <Days />
+      <Details />
     </div>
   );
 }

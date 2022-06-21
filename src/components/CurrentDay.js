@@ -1,14 +1,18 @@
 import PropTypes from "prop-types";
+import Sun from "../sun.svg";
 
 function CurrentDay(props) {
   const { city, temp, condition } = props;
 
   return (
-    <>
-      <h1>{city}</h1>
-      <h1>{temp}</h1>
-      <h1>{condition}</h1>
-    </>
+    <div className="current-day">
+      <p className="current-city">{city}</p>
+      <div className="current-sun-temp">
+        <img className="current-sun" src={Sun} alt="sun" />
+        <p className="current-temp">{temp}°</p>
+      </div>
+      <p className="current-condition">{condition}</p>
+    </div>
   );
 }
 

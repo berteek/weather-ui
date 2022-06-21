@@ -12,7 +12,7 @@ function Details(props) {
   } = props;
 
   return (
-    <div className="weather-details">
+    <div>
       <h1>{feelsTemp}</h1>
       <h1>{humidity}</h1>
       <h1>{visibility}</h1>

@@ -8,7 +8,7 @@ function Days() {
 
   return (
     <>
-      <h1>Days</h1>
+      <h1>По дням</h1>
       <div className="days">
         <Day
           date="today"

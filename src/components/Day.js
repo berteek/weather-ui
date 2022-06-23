@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 
+import ConditionPic from "./ConditionPic";
+
 function Day(props) {
-  const { date, maxTemp, minTemp, tabIndex, isActive, callback } = props;
+  const { name, condition, maxTemp, minTemp, tabIndex, isActive, callback } =
+    props;
 
   return (
     <div
@@ -10,15 +13,19 @@ function Day(props) {
       className={isActive ? "day active-day" : "day"}
       onClick={() => callback()}
     >
-      <h1>{date}</h1>
-      <h1>{maxTemp}</h1>
-      <h1>{minTemp}</h1>
+      <p className="day-name">{name}</p>
+      <ConditionPic cssClass="day-condition-pic" condition={condition} />
+      <div className="day-temp">
+        <p className="day-temp-max">{maxTemp}°</p>
+        <p className="day-temp-min">{minTemp}°</p>
+      </div>
     </div>
   );
 }
 
 Day.defaultProps = {
-  date: "NO_DATE",
+  name: "NO_NAME",
+  condition: "NO_CONDITION",
   maxTemp: 999,
   minTemp: -999,
   tabIndex: -1,
@@ -27,7 +34,8 @@ Day.defaultProps = {
 };
 
 Day.propTypes = {
-  date: PropTypes.string,
+  name: PropTypes.string,
+  condition: PropTypes.string,
   maxTemp: PropTypes.number,
   minTemp: PropTypes.number,
   tabIndex: PropTypes.number,

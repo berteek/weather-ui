@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import Sun from "../sun.svg";
+
+import ConditionPic from "./ConditionPic";
 
 function CurrentDay(props) {
   const { city, temp, condition } = props;
@@ -7,8 +8,8 @@ function CurrentDay(props) {
   return (
     <div className="current-day">
       <p className="current-city">{city}</p>
-      <div className="current-sun-temp">
-        <img className="current-sun" src={Sun} alt="sun" />
+      <div className="current-condition-pic-temp">
+        <ConditionPic condition={condition} />
         <p className="current-temp">{temp}°</p>
       </div>
       <p className="current-condition">{condition}</p>

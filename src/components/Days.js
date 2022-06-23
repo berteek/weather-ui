@@ -7,11 +7,12 @@ function Days() {
   const [activeDay, setActiveDay] = useState(0);
 
   return (
-    <>
-      <h1>По дням</h1>
+    <div className="days-and-details">
+      <p className="days-title">По дням</p>
       <div className="days">
         <Day
-          date="today"
+          name="Сегодня"
+          condition="Солнечно"
           maxTemp={19}
           minTemp={6}
           tabIndex={0}
@@ -21,7 +22,7 @@ function Days() {
           }}
         />
         <Day
-          date="tomorrow"
+          name="Завтра"
           maxTemp={17}
           minTemp={5}
           tabIndex={-1}
@@ -31,7 +32,7 @@ function Days() {
           }}
         />
         <Day
-          date="wednesday"
+          name="wednesday"
           maxTemp={25}
           minTemp={10}
           tabIndex={-2}
@@ -41,7 +42,7 @@ function Days() {
           }}
         />
         <Day
-          date="thursday"
+          name="thursday"
           maxTemp={32}
           minTemp={22}
           tabIndex={-3}
@@ -51,7 +52,7 @@ function Days() {
           }}
         />
         <Day
-          date="friday"
+          name="friday"
           maxTemp={24}
           minTemp={15}
           tabIndex={-4}
@@ -61,7 +62,7 @@ function Days() {
           }}
         />
         <Day
-          date="saturday"
+          name="saturday"
           maxTemp={14}
           minTemp={6}
           tabIndex={-5}
@@ -71,7 +72,7 @@ function Days() {
           }}
         />
         <Day
-          date="sunday"
+          name="sunday"
           maxTemp={18}
           minTemp={7}
           tabIndex={-6}
@@ -82,7 +83,7 @@ function Days() {
         />
       </div>
       <Details />
-    </>
+    </div>
   );
 }
 

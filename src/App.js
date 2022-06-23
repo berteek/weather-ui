@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="container">
-      <CurrentDay temp={4} />
+      <CurrentDay temp={4} city="Казань" condition="Солнечно" />
       <Days />
     </div>
   );

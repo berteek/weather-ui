@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 
+import Rise from "../svg/rise.svg";
+import Dawn from "../svg/dawn.svg";
+
 function Details(props) {
   const {
     feelsTemp,
@@ -41,11 +44,17 @@ function Details(props) {
         <div className="details-2">
           <div className="details-item">
             <p className="details-item-title">Восход</p>
-            <p className="details-item-value">{riseTime}</p>
+            <div className="details-rise-dawn-value">
+              <img src={Rise} alt="Восход" />
+              <p className="details-item-value">{riseTime}</p>
+            </div>
           </div>
           <div className="details-item">
             <p className="details-item-title">Закат</p>
-            <p className="details-item-value">{dawnTime}</p>
+            <div className="details-rise-dawn-value">
+              <img src={Dawn} alt="Закат" />
+              <p className="details-item-value">{dawnTime}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -153,3 +153,14 @@ code {
   font-weight: 300;
   font-size: 3vh;
 }
+
+.details-rise-dawn-value {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-rise-dawn-value img {
+  height: 6vh;
+  align-self: center;
+  margin-right: 2vh;
+}

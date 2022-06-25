@@ -13,13 +13,42 @@ function Details(props) {
 
   return (
     <div>
-      <h1>{feelsTemp}</h1>
-      <h1>{humidity}</h1>
-      <h1>{visibility}</h1>
-      <h1>{atmPressure}</h1>
-      <h1>{windSpeed}</h1>
-      <h1>{riseTime}</h1>
-      <h1>{dawnTime}</h1>
+      <p className="details-title">Подробности</p>
+      <div className="details-12">
+        <div className="details-1">
+          <div className="details-item">
+            <p className="details-item-title">По ощущениям</p>
+            <p className="details-item-value">{feelsTemp}°</p>
+          </div>
+          <div className="details-item">
+            <p className="details-item-title">Влажность</p>
+            <p className="details-item-value">{humidity}%</p>
+          </div>
+          <div className="details-item">
+            <p className="details-item-title">Видимость</p>
+            <p className="details-item-value">{visibility} км</p>
+          </div>
+          <div className="details-item">
+            <p className="details-item-title">Давление</p>
+            <p className="details-item-value">{atmPressure} мм</p>
+          </div>
+          <div className="details-item">
+            <p className="details-item-title">Ветер</p>
+            <p className="details-item-value">{windSpeed} м/с</p>
+          </div>
+          <div className="details-item" />
+        </div>
+        <div className="details-2">
+          <div className="details-item">
+            <p className="details-item-title">Восход</p>
+            <p className="details-item-value">{riseTime}</p>
+          </div>
+          <div className="details-item">
+            <p className="details-item-title">Закат</p>
+            <p className="details-item-value">{dawnTime}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -30,8 +59,8 @@ Details.defaultProps = {
   visibility: 999,
   atmPressure: 999,
   windSpeed: 999,
-  riseTime: 999,
-  dawnTime: 999,
+  riseTime: "10:10",
+  dawnTime: "20:20",
 };
 
 Details.propTypes = {
@@ -40,8 +69,8 @@ Details.propTypes = {
   visibility: PropTypes.number,
   atmPressure: PropTypes.number,
   windSpeed: PropTypes.number,
-  riseTime: PropTypes.number,
-  dawnTime: PropTypes.number,
+  riseTime: PropTypes.string,
+  dawnTime: PropTypes.string,
 };
 
 export default Details;

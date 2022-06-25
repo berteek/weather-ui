@@ -1,7 +1,8 @@
 // import { useEffect } from "react";
 
-import Days from "./components/Days";
 import CurrentDay from "./components/CurrentDay";
+import Days from "./components/Days";
+import Details from "./components/Details";
 
 // const API_URL = "https://api.openweathermap.org/data/3.0/onecall";
 // const API_KEY = "94ce2d9e62715a88d0e0ed793fd87fb9";
@@ -22,7 +23,10 @@ function App() {
   return (
     <div className="container">
       <CurrentDay temp={4} city="Казань" condition="Солнечно" />
-      <Days />
+      <div className="days-and-details">
+        <Days />
+        <Details />
+      </div>
     </div>
   );
 }

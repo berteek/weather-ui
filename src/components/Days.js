@@ -1,13 +1,12 @@
 import { useState } from "react";
 
 import Day from "./Day";
-import Details from "./Details";
 
 function Days() {
   const [activeDay, setActiveDay] = useState(0);
 
   return (
-    <div className="days-and-details">
+    <>
       <p className="days-title">По дням</p>
       <div className="days">
         <Day
@@ -82,8 +81,7 @@ function Days() {
           }}
         />
       </div>
-      <Details />
-    </div>
+    </>
   );
 }
 

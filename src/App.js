@@ -67,7 +67,7 @@ function App() {
           humidity={dailyData.daily[activeDay].humidity}
           visibility={dailyData.daily[activeDay].visibility}
           atmPressure={Math.round(
-            dailyData.daily[activeDay].pressure / 1.3332239
+            dailyData.daily[activeDay].pressure / 1.33322387415
           )}
           windSpeed={Math.round(dailyData.daily[activeDay].wind_speed)}
           riseTime={new Date(

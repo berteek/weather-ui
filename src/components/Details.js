@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import Rise from "../svg/rise.svg";
 import Dawn from "../svg/dawn.svg";
 
+import Vector from "../svg/vector.svg";
+
 function Details(props) {
   const {
     feelsTemp,
@@ -37,7 +39,10 @@ function Details(props) {
           </div>
           <div className="details-item">
             <p className="details-item-title">Ветер</p>
-            <p className="details-item-value">{windSpeed} м/с</p>
+            <div className="details-windspeed">
+              <img src={Vector} alt="vector" />
+              <p className="details-item-value">{windSpeed} м/с</p>
+            </div>
           </div>
           <div className="details-item" />
         </div>

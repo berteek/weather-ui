@@ -55,17 +55,27 @@ function App() {
     cod: 200,
   });
 
+  const [lat, setLat] = useState(0);
+  const [lon, setLon] = useState(0);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setLat(position.coords.latitude);
+      setLon(position.coords.longitude);
+    });
+  }, []);
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `${API_URL}?lat=54.2198&lon=49.6212&appid=${API_KEY}&units=metric&lang=ru`
+        `${API_URL}?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ru`
       );
       const data = await response.json();
       setCurrentDayData(data);
     }
 
     fetchData();
-  }, []);
+  }, [lat]);
 
   useEffect(() => {
     console.log(currentDayData);

@@ -51,6 +51,7 @@ function App() {
         temp={Math.round(currentDayData.main.temp)}
         city={currentDayData.name}
         condition={capitalizeFirstLetter(currentDayData.weather[0].description)}
+        conditionCode={currentDayData.weather[0].icon}
       />
       <div className="days-and-details">
         <Days

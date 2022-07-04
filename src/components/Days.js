@@ -28,7 +28,7 @@ function Days(props) {
       <div className="days">
         <Day
           name="Сегодня"
-          condition={dailyData.daily[0].weather[0].description}
+          conditionCode={dailyData.daily[0].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[0].temp.max)}
           minTemp={Math.round(dailyData.daily[0].temp.min)}
           tabIndex={0}
@@ -39,7 +39,7 @@ function Days(props) {
         />
         <Day
           name="Завтра"
-          condition={dailyData.daily[1].weather[0].description}
+          conditionCode={dailyData.daily[1].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[1].temp.max)}
           minTemp={Math.round(dailyData.daily[1].temp.min)}
           tabIndex={-1}
@@ -55,7 +55,7 @@ function Days(props) {
               day: "numeric",
             })
           )}
-          condition={dailyData.daily[2].weather[0].description}
+          conditionCode={dailyData.daily[2].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[2].temp.max)}
           minTemp={Math.round(dailyData.daily[2].temp.min)}
           tabIndex={-2}
@@ -71,7 +71,7 @@ function Days(props) {
               day: "numeric",
             })
           )}
-          condition={dailyData.daily[3].weather[0].description}
+          conditionCode={dailyData.daily[3].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[3].temp.max)}
           minTemp={Math.round(dailyData.daily[3].temp.min)}
           tabIndex={-3}
@@ -87,7 +87,7 @@ function Days(props) {
               day: "numeric",
             })
           )}
-          condition={dailyData.daily[4].weather[0].description}
+          conditionCode={dailyData.daily[4].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[4].temp.max)}
           minTemp={Math.round(dailyData.daily[4].temp.min)}
           tabIndex={-4}
@@ -103,7 +103,7 @@ function Days(props) {
               day: "numeric",
             })
           )}
-          condition={dailyData.daily[5].weather[0].description}
+          conditionCode={dailyData.daily[5].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[5].temp.max)}
           minTemp={Math.round(dailyData.daily[5].temp.min)}
           tabIndex={-5}
@@ -119,7 +119,7 @@ function Days(props) {
               day: "numeric",
             })
           )}
-          condition={dailyData.daily[6].weather[0].description}
+          conditionCode={dailyData.daily[6].weather[0].icon}
           maxTemp={Math.round(dailyData.daily[6].temp.max)}
           minTemp={Math.round(dailyData.daily[6].temp.min)}
           tabIndex={-6}

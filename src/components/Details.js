@@ -33,7 +33,6 @@ function Details(props) {
               <p className="details-item-value">{windSpeed} м/с</p>
             </div>
           </div>
-          <div className="details-item" />
         </div>
         <div className="details-2">
           <div className="details-item">

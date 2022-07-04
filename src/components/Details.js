@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-import Rise from "../svg/rise.svg";
-import Dawn from "../svg/dawn.svg";
+import Rise from "../svg/rise_and_dawn/rise.svg";
+import Dawn from "../svg/rise_and_dawn/dawn.svg";
 
 import Vector from "../svg/vector.svg";
 

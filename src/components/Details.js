@@ -6,15 +6,8 @@ import Dawn from "../svg/dawn.svg";
 import Vector from "../svg/vector.svg";
 
 function Details(props) {
-  const {
-    feelsTemp,
-    humidity,
-    visibility,
-    atmPressure,
-    windSpeed,
-    riseTime,
-    dawnTime,
-  } = props;
+  const { feelsTemp, humidity, atmPressure, windSpeed, riseTime, dawnTime } =
+    props;
 
   return (
     <div>
@@ -28,10 +21,6 @@ function Details(props) {
           <div className="details-item">
             <p className="details-item-title">Влажность</p>
             <p className="details-item-value">{humidity}%</p>
-          </div>
-          <div className="details-item">
-            <p className="details-item-title">Видимость</p>
-            <p className="details-item-value">{visibility} км</p>
           </div>
           <div className="details-item">
             <p className="details-item-title">Давление</p>
@@ -70,7 +59,6 @@ function Details(props) {
 Details.defaultProps = {
   feelsTemp: 999,
   humidity: 999,
-  visibility: 999,
   atmPressure: 999,
   windSpeed: 999,
   riseTime: "10:10",
@@ -80,7 +68,6 @@ Details.defaultProps = {
 Details.propTypes = {
   feelsTemp: PropTypes.number,
   humidity: PropTypes.number,
-  visibility: PropTypes.number,
   atmPressure: PropTypes.number,
   windSpeed: PropTypes.number,
   riseTime: PropTypes.string,

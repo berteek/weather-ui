@@ -43,10 +43,6 @@ function App() {
     fetchData();
   }, [lat]);
 
-  useEffect(() => {
-    console.log(currentDayData);
-  }, [currentDayData]);
-
   const [activeDay, setActiveDay] = useState(0);
 
   return (
@@ -65,7 +61,6 @@ function App() {
         <Details
           feelsTemp={Math.round(dailyData.daily[activeDay].feels_like.day)}
           humidity={dailyData.daily[activeDay].humidity}
-          visibility={dailyData.daily[activeDay].visibility}
           atmPressure={Math.round(
             dailyData.daily[activeDay].pressure / 1.33322387415
           )}

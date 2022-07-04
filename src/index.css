@@ -120,7 +120,7 @@ code {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 35vw;
+  width: 20vw;
   justify-content: space-between;
   border-top: 2px solid rgba(255, 255, 255, 0.25);
   margin-right: 5vw;

@@ -41,7 +41,7 @@ function App() {
     }
 
     fetchData();
-  }, [lat]);
+  }, [lat, lon]);
 
   const [activeDay, setActiveDay] = useState(0);
 

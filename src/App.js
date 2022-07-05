@@ -20,6 +20,7 @@ function App() {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
 
+  // Супер, молодец!
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       setLat(position.coords.latitude);
@@ -30,8 +31,10 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const currentResponse = await fetch(
+        // В переменную url
         `${CURRENT_API_URL}?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=ru`
       );
+      // Лучше не "экономить" на переменных и записывать значения сначала в них
       setCurrentDayData(await currentResponse.json());
 
       const dailyResponse = await fetch(
@@ -41,9 +44,11 @@ function App() {
     }
 
     fetchData();
+    // lon забыл
   }, [lat]);
 
   const [activeDay, setActiveDay] = useState(0);
+  // Все вычисляемые свойства должны быть в переменных. Не в разметке
 
   return (
     <div className="container">

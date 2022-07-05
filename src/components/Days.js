@@ -5,8 +5,11 @@ import { capitalizeFirstLetter } from "../Utils";
 import Day from "./Day";
 
 function Days(props) {
+  // можно деструктуризировать прям в аргументах
+  // function Days({ activeDay, setActiveDay, dailyData }) {
   const { activeDay, setActiveDay, dailyData } = props;
 
+  // Костыли
   const day2 = new Date(0);
   day2.setUTCSeconds(dailyData.daily[2].dt);
 
@@ -22,6 +25,8 @@ function Days(props) {
   const day6 = new Date(0);
   day6.setUTCSeconds(dailyData.daily[6].dt);
 
+  // Тут реакт фрагмент не нужен. Но можем закрыть глаза, тк это демонстрация
+  // У тебя есть массив дней. Их необходимо мапить, а не хардкодить. Подумай как сделать мапом
   return (
     <>
       <p className="days-title">По дням</p>
@@ -132,6 +137,8 @@ function Days(props) {
     </>
   );
 }
+
+// Определенный плюс за проптайпсы, но они по большому счету устарели. Для типизации используем Floow/TypeScript
 
 const { arrayOf, number, shape, string, func } = PropTypes;
 

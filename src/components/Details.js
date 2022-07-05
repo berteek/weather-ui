@@ -9,6 +9,8 @@ function Details(props) {
   const { feelsTemp, humidity, atmPressure, windSpeed, riseTime, dawnTime } =
     props;
 
+  // Когда используешь перечесление, необходимо использовать список ul>li чем div>div
+
   return (
     <div>
       <p className="details-title">Подробности</p>

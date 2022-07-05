@@ -1,3 +1,4 @@
+// Зачем делать через возврат функции? Лучше через const
 function getInitCurrentDay() {
   return {
     coord: {
@@ -44,7 +45,7 @@ function getInitCurrentDay() {
     cod: 200,
   };
 }
-
+// лучше сразу прописывать export function ..(){
 function getInitDaily() {
   return {
     lat: 33.44,

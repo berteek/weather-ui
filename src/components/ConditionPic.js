@@ -16,6 +16,14 @@ import Mist from "../svg/mist.svg";
 function ConditionPic(props) {
   const { cssClass, code } = props;
 
+  // вместо switch лучше использовать dictionary
+
+  // const dictionary = {
+  //   "01d": Day,
+  //   // ...
+  // };
+  //  <img className={cssClass} src={dictionary[code]} alt="Condition" />;
+
   let conditionPic;
   switch (code) {
     case "01d":
